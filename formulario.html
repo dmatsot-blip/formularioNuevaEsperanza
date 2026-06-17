@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario Institucional</title>
+
+  <!-- Llamado a la hoja de estilo -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Centro Educativo Nueva Esperanza</h1>
+    <p>Formulario Institucional de Atención Estudiantil</p>
+  </header>
+
+  <div class="contenedor">
+    <h2>Registro de Solicitud</h2>
+
+    <form id="formulario">
+
+      <fieldset>
+        <legend>1. Datos del estudiante</legend>
+
+        <div class="fila">
+          <div class="grupo">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" placeholder="Digite el nombre completo">
+          </div>
+
+          <div class="grupo">
+            <label for="identificacion">Identificación:</label>
+            <input type="text" id="identificacion" placeholder="Ejemplo: 1-2345-6789">
+          </div>
+        </div>
+
+        <div class="fila">
+          <div class="grupo">
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" min="5" max="80" placeholder="Digite la edad">
+          </div>
+
+          <div class="grupo">
+            <label for="nivel">Nivel educativo:</label>
+            <select id="nivel">
+              <option value="">Seleccione una opción</option>
+              <option value="Primaria">Primaria</option>
+              <option value="Séptimo año">Séptimo año</option>
+              <option value="Octavo año">Octavo año</option>
+              <option value="Noveno año">Noveno año</option>
+              <option value="Décimo año">Décimo año</option>
+              <option value="Undécimo año">Undécimo año</option>
+              <option value="Educación de adultos">Educación de adultos</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="fila">
+          <div class="grupo">
+            <label for="seccion">Sección:</label>
+            <input type="text" id="seccion" placeholder="Ejemplo: 7-1">
+          </div>
+
+          <div class="grupo">
+            <label for="jornada">Jornada:</label>
+            <select id="jornada">
+              <option value="">Seleccione una opción</option>
+              <option value="Mañana">Mañana</option>
+              <option value="Tarde">Tarde</option>
+              <option value="Noche">Noche</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>2. Datos del encargado</legend>
+
+        <div class="fila">
+          <div class="grupo">
+            <label for="encargado">Nombre del encargado:</label>
+            <input type="text" id="encargado" placeholder="Nombre completo">
+          </div>
+
+          <div class="grupo">
+            <label for="parentesco">Parentesco:</label>
+            <select id="parentesco">
+              <option value="">Seleccione una opción</option>
+              <option value="Madre">Madre</option>
+              <option value="Padre">Padre</option>
+              <option value="Abuela/Abuelo">Abuela/Abuelo</option>
+              <option value="Tía/Tío">Tía/Tío</option>
+              <option value="Encargado legal">Encargado legal</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="fila">
+          <div class="grupo">
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" placeholder="Ejemplo: 8888-8888">
+          </div>
+
+          <div class="grupo">
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" placeholder="ejemplo@correo.com">
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>3. Detalle de la solicitud</legend>
+
+        <div class="grupo">
+          <label for="tipoSolicitud">Tipo de solicitud:</label>
+          <select id="tipoSolicitud">
+            <option value="">Seleccione una opción</option>
+            <option value="Matrícula">Matrícula</option>
+            <option value="Constancia">Solicitud de constancia</option>
+            <option value="Justificación de ausencia">Justificación de ausencia</option>
+            <option value="Apoyo educativo">Solicitud de apoyo educativo</option>
+            <option value="Consulta de notas">Consulta de notas</option>
+            <option value="Reunión con docente">Solicitud de reunión con docente</option>
+            <option value="Reunión con orientación">Solicitud de reunión con orientación</option>
+          </select>
+        </div>
+
+        <div id="campoAusencia" class="oculto">
+          <div class="fila">
+            <div class="grupo">
+              <label for="fechaAusencia">Fecha de ausencia:</label>
+              <input type="date" id="fechaAusencia">
+            </div>
+
+            <div class="grupo">
+              <label for="motivoAusencia">Motivo de ausencia:</label>
+              <input type="text" id="motivoAusencia" placeholder="Ejemplo: cita médica">
+            </div>
+          </div>
+        </div>
+
+        <div id="campoReunion" class="oculto">
+          <div class="fila">
+            <div class="grupo">
+              <label for="fechaReunion">Fecha sugerida:</label>
+              <input type="date" id="fechaReunion">
+            </div>
+
+            <div class="grupo">
+              <label for="horaReunion">Hora sugerida:</label>
+              <input type="time" id="horaReunion">
+            </div>
+          </div>
+        </div>
+
+        <div id="campoApoyo" class="oculto">
+          <div class="grupo">
+            <label>Área en la que requiere apoyo:</label>
+
+            <div class="opciones">
+              <label><input type="checkbox" value="Lectura"> Lectura</label>
+              <label><input type="checkbox" value="Escritura"> Escritura</label>
+              <label><input type="checkbox" value="Matemática"> Matemática</label>
+              <label><input type="checkbox" value="Conducta"> Conducta</label>
+              <label><input type="checkbox" value="Atención"> Atención</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="grupo">
+          <label for="urgencia">Nivel de urgencia:</label>
+          <select id="urgencia">
+            <option value="">Seleccione una opción</option>
+            <option value="Baja">Baja</option>
+            <option value="Media">Media</option>
+            <option value="Alta">Alta</option>
+          </select>
+        </div>
+
+        <div class="grupo">
+          <label for="detalle">Detalle de la solicitud:</label>
+          <textarea id="detalle" placeholder="Explique brevemente la solicitud"></textarea>
+        </div>
+
+        <div class="grupo">
+          <label for="archivo">Adjuntar documento:</label>
+          <input type="file" id="archivo">
+        </div>
+
+        <div class="grupo">
+          <label>
+            <input type="checkbox" id="autorizacion" class="check">
+            Autorizo el uso de esta información para fines educativos y administrativos.
+          </label>
+        </div>
+
+        <div class="grupo">
+          <label>
+            <input type="checkbox" id="veracidad" class="check">
+            Declaro que la información brindada es verdadera.
+          </label>
+        </div>
+      </fieldset>
+
+      <div class="botones">
+        <button type="submit" class="btn-enviar">Enviar formulario</button>
+        <button type="reset" class="btn-limpiar">Limpiar formulario</button>
+      </div>
+
+      <div id="mensajeRespuesta" class="mensaje"></div>
+
+    </form>
+
+    <div id="resumen" class="resumen">
+      <h3>Resumen de la solicitud enviada</h3>
+      <p id="datosResumen"></p>
+    </div>
+  </div>
+
+  <footer>
+    Centro Educativo Nueva Esperanza © 2026
+  </footer>
+
+  <!-- Llamado al archivo JavaScript -->
+  <script src="index.js"></script>
+
+</body>
+</html>
